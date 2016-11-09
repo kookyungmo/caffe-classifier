@@ -120,8 +120,8 @@ class Model(object):
         if score is not None:
             for i in indices:
                 if self.labels is not None:
-                    results.append({"label": self.labels[i], "score": score[i]})
+                    results.append({"label": self.labels[i], "score": float(score[i])})
                 else:
-                    results.append({"label": i, "score": score[i]})
+                    results.append({"label": i, "score": float(score[i])})
 
         return results
